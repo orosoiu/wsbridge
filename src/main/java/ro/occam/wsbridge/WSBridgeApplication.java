@@ -9,5 +9,4 @@ public class WSBridgeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WSBridgeApplication.class, args);
 	}
-
 }

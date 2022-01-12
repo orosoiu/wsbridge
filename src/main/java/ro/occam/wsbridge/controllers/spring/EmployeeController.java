@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ro.occam.wsbridge.dtos.EmployeeDto;
 
 import java.util.Collection;
-import java.util.Collections;
+import java.util.List;
 
 @RestController
 @RequestMapping(("api/spring/employees"))
@@ -14,11 +14,11 @@ public class EmployeeController {
 
     @GetMapping
     public Collection<EmployeeDto> getEmployees() {
-        return Collections.singleton(EmployeeDto.builder()
-                        .firstName("John")
-                        .lastName("Doe")
-                        .jobTitle("Principal software engineer")
-                        .email("john.doe@occam.ro")
-                        .build());
+        return List.of(EmployeeDto.builder()
+                .firstName("John")
+                .lastName("Doe")
+                .jobTitle("Principal software engineer")
+                .email("john.doe@occam.ro")
+                .build());
     }
 }
