@@ -7,7 +7,7 @@ import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ro.occam.wsbridge.controllers.cxf.JobAdsController;
+import ro.occam.wsbridge.controllers.cxf.JobsController;
 import ro.occam.wsbridge.controllers.cxf.StatusController;
 
 import java.util.Arrays;
@@ -23,7 +23,7 @@ public class CxfConfig {
         final JAXRSServerFactoryBean endpoint = new JAXRSServerFactoryBean();
         endpoint.setProvider(new JacksonJsonProvider());
         endpoint.setBus(bus);
-        endpoint.setServiceBeans(Arrays.asList(new JobAdsController(), new StatusController()));
+        endpoint.setServiceBeans(Arrays.asList(new JobsController(), new StatusController()));
         endpoint.setAddress("/");
         return endpoint.create();
     }

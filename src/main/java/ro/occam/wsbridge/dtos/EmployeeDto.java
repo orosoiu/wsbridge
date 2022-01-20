@@ -1,5 +1,6 @@
 package ro.occam.wsbridge.dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,4 +12,6 @@ public class EmployeeDto {
     private String lastName;
     private String jobTitle;
     private String email;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String badgeNo;
 }

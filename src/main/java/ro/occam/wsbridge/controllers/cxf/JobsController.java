@@ -7,13 +7,12 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-@Path("/jobs")
+@Path("/api/jobs")
 @Service
-public class JobAdsController {
+public class JobsController {
 
     @GET
     @Path("/")
@@ -26,4 +25,3 @@ public class JobAdsController {
                 .build());
     }
 }
-
