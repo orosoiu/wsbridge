@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class JobAdDto {
+public class JobDto {
 
     private String title;
     private String description;

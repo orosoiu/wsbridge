@@ -1,7 +1,7 @@
 package ro.occam.wsbridge.controllers.cxf;
 
 import org.springframework.stereotype.Service;
-import ro.occam.wsbridge.dtos.JobAdDto;
+import ro.occam.wsbridge.dtos.JobDto;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,8 +17,8 @@ public class JobsController {
     @GET
     @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
-    public Collection<JobAdDto> getAllJobs() {
-        return List.of(JobAdDto.builder()
+    public Collection<JobDto> getAllJobs() {
+        return List.of(JobDto.builder()
                 .title("Senior developer wanted")
                 .description("Looking for a senior developer who can write a bridge " +
                         "to integrate Spring MVC and Apache CXF frameworks")
