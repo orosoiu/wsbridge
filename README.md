@@ -6,11 +6,11 @@ This project is a PoC showing RESTful Apache CXF and Spring MVC web services run
 
 Software is not static, but an ever changing construct of different components and frameworks. New parts are constantly being added, old parts are being re-written or discarded. Sometimes entire frameworks are being replaced, whether for cost, performance, security or other considerations.
 
-Many times - and particularly for enterprise and other very large applications - replacing a framework with another proves to be a very delicate, complex and time-consuming task. To enable a smooth migration, both frameworks need to be kept in operation throughout the duration of the migration in a way that is transparent to both end clients and developers.![image](https://user-images.githubusercontent.com/3442410/233148586-ab341180-d2ad-4ce2-9330-7c57c3e1caf4.png)
+Many times - and particularly for enterprise and other very large applications - replacing a framework with another proves to be a very delicate, complex and time-consuming task. To enable a smooth migration, both frameworks need to be kept in operation throughout the duration of the migration in a way that is transparent to both end clients and developers.
 
 ## How it works?
 
-The PoC architecture is very simple: since we cannot map both frameworks on the same client context path, each one is mapped on a different internal context path and the external API root context is mapped on a dispatcher servlet which forwards the API request to the correct implementation's internal path.![image](https://user-images.githubusercontent.com/3442410/233148606-f4fc38fa-d8ed-477f-be51-a1ab27261e24.png)
+The PoC architecture is very simple: since we cannot map both frameworks on the same client context path, each one is mapped on a different internal context path and the external API root context is mapped on a dispatcher servlet which forwards the API request to the correct implementation's internal path.
 
 ![image](https://user-images.githubusercontent.com/3442410/233148624-e550f62c-f760-4f61-b455-7f6f9d7a9149.png)
 
