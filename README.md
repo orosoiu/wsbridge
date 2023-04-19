@@ -12,7 +12,7 @@ Many times - and particularly for enterprise and other very large applications -
 
 The PoC architecture is very simple: since we cannot map both frameworks on the same client context path, each one is mapped on a different internal context path and the external API root context is mapped on a dispatcher servlet which forwards the API request to the correct implementation's internal path.
 
-![image](https://user-images.githubusercontent.com/3442410/233148624-e550f62c-f760-4f61-b455-7f6f9d7a9149.png)
+![image](https://user-images.githubusercontent.com/3442410/233149665-086165e7-18f6-46fb-b2fe-0c7161b5cc8a.png)
 
 The two main components enabling this process are:
 
